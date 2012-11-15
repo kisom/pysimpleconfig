@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>pysimpleconfig by kisom</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>pysimpleconfig</h1>
+        <p>a dead simple Python configuration file reader.</p>
+
+        <p class="view"><a href="https://github.com/kisom/pysimpleconfig">View the Project on GitHub <small>kisom/pysimpleconfig</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/kisom/pysimpleconfig/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/kisom/pysimpleconfig/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/kisom/pysimpleconfig">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>why?</h2>
+
+<p>I've written this code several times for a couple projects; I got sick of
+copying the file over to new project directories.</p>
+
+<h2>configuration file syntax</h2>
+
+<pre><code>[section_name]
+key = value
+
+# a comment describing the following section
+[other_section]
+key = value
+</code></pre>
+
+<p>There may be as many key = value lines in a given section. Multiline values
+are not supported. Anything not matching one of these patterns will raise
+an <code>IOError</code> exception in the module. White space is not significant in section
+headers (i.e. <code>[ section1 ]</code> is the same as <code>[section1]</code>) or in the key = value
+pairs (i.e. <code>key=value</code> is the same as <code>key = value</code>). Keys, values, and section
+names may have whitespace in them. The default section name, if none is
+provided, is 'default'.</p>
+
+<h2>return value and example</h2>
+
+<p><code>parse()</code> returns a dictionary where each section is a key at the top level,
+and is a dictionary of key=value pairs itself. For example, given the config
+file:</p>
+
+<pre><code># section 1 contains various Zork-related keys and values
+[section1]
+foo = bar
+baz = quux
+
+spam = eggs
+
+# section 2 contains various Pinky and the Brain-related keys and values.
+[section2]
+zort = troz
+narf = poit
+</code></pre>
+
+<p>We could parse this with <code>simpleconfig</code>:</p>
+
+<pre><code>&gt;&gt;&gt; import simpleconfig
+&gt;&gt;&gt; simpleconfig.parse('test.conf')
+{'section2': {'zort': 'troz', 'narf': 'poit'}, 'section1': {'foo': 'bar', 'baz': 'quux', 'spam': 'eggs'}}
+</code></pre>
+
+<h2>license</h2>
+
+<p>simpleconfig is released under an ISC license.</p>
+
+<h2>author</h2>
+
+<p><code>simpleconfig</code> was written by Kyle Isom <a href="mailto:coder@kyleisom.net">coder@kyleisom.net</a>.</p>
+
+<p>The source for <code>simpleconfig</code> is online:</p>
+
+<ul>
+<li><a href="https://github.com/kisom/pysimpleconfig">Github</a></li>
+<li><a href="https://bitbucket.org/kisom/pysimpleconfig">Bitbucket</a></li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/kisom">kisom</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
