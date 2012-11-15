@@ -8,18 +8,20 @@ copying the file over to new project directories.
 
 configuration file syntax
 -------------------------
+```
 [section_name]
 key = value
 
 # a comment describing the following section
 [other_section]
 key = value
+```
 
 There may be as many key = value lines in a given section. Multiline values
 are not supported. Anything not matching one of these patterns will raise
-an IOError exception in the module. White space is not significant in section
-headers (i.e. [ section1 ] is the same as [section1]) or in the key = value
-pairs (i.e. key=value is the same as key = value). Keys, values, and section
+an `IOError` exception in the module. White space is not significant in section
+headers (i.e. `[ section1 ]` is the same as `[section1]`) or in the key = value
+pairs (i.e. `key=value` is the same as `key = value`). Keys, values, and section
 names may have whitespace in them. The default section name, if none is
 provided, is 'default'.
 
