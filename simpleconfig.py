@@ -33,7 +33,7 @@ def parse(filename=None, cfg=None):
     section_re = re.compile(r'^\s*\[\s*(\w+)\s*\]\s*$')
     line_re = re.compile(r'^\s*(\w+)\s*=\s*(.*)\s*$')
     comment_re = re.compile(r'^#.*$')
-    blank_re = re.compile('^\s*$')
+    blank_re = re.compile(r'^\s*$')
 
     current_section = "default"
 
@@ -51,6 +51,8 @@ def parse(filename=None, cfg=None):
             elif line_re.match(line):
                 key = line_re.sub(r'\1', line)
                 val = line_re.sub(r'\2', line)
+                if not current_section in cfg:
+                    cfg[current_section] = {}
                 if not key == "":
                     cfg[current_section][key] = val
             else:
