@@ -64,7 +64,7 @@ simpleconfig is released under an ISC license.
 
 author
 ------
-`simpleconfig` was written by Kyle Isom <coder@kyleisom.net>.
+simpleconfig was written by Kyle Isom <coder@kyleisom.net>.
 
 additional
 ----------
@@ -75,7 +75,5 @@ with previous version of Python.
 
 The docs are on `RTD <https://simpleconfig.readthedocs.io>`_.
 
-The source for `simpleconfig` is online:
-
-* `Github <https://github.com/kisom/pysimpleconfig>`_
+The sources for simpleconfig are on `Github <https://github.com/kisom/pysimpleconfig>`_.
 
