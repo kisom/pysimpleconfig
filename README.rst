@@ -1,6 +1,9 @@
 simpleconfig
 ============
 
+.. image:: https://travis-ci.org/kisom/pysimpleconfig.svg?branch=master
+    :target: https://travis-ci.org/kisom/pysimpleconfig
+
 what?
 -----
 
@@ -63,12 +66,16 @@ author
 ------
 `simpleconfig` was written by Kyle Isom <coder@kyleisom.net>.
 
-source and docs
----------------
+additional
+----------
+
+The module is only tested for compatibility against Python 2.7 and
+Python 3.3+. There are no guarantees (or attempts) at compatibility
+with previous version of Python.
 
 The docs are on `RTD <https://simpleconfig.readthedocs.io>`_.
 
 The source for `simpleconfig` is online:
 
-* [Github](https://github.com/kisom/pysimpleconfig)
+* `Github <https://github.com/kisom/pysimpleconfig>`_
 

@@ -26,3 +26,6 @@ build/
 # Spyder project settings
 # Rope project settings
 .idea/
+MANIFEST
+simpleconfig.egg-info
+dist
