@@ -1,13 +1,10 @@
-sudo: true # turning this off broke Python 2.7, 3.3, and 3.4.
+sudo: false
 language: python
 python:
   - "2.7"
-  - "3.3"
-  - "3.4"
   - "3.5"
   - "3.6"
-  - "3.6-dev" # 3.6 development branch
-  - "3.7-dev" # 3.7 development branch
-  - "nightly" # currently points to 3.7-dev
+  - "3.7"
+  - "nightly"
 install: "pip install -r requirements.txt"
 script: pytest
